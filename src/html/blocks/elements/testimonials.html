@@ -1,0 +1,26 @@
+<section class="testimonials">
+  <div class="container">
+    <div class="testimonials__grid--full">
+
+
+      <div class="swiper" id="swiper-testimonials">
+        <div class="swiper-wrapper">
+          @@loop('./../templates/slide-testimonials.html', './data/testimonials.json')
+        </div>
+      </div>
+
+
+    </div>
+    <div class="testimonials__grid">
+      <div class="testimonials__col">
+        @@loop('./../templates/card-review.html', './data/testimonials-1.json')
+      </div>
+      <div class="testimonials__col">
+        @@loop('./../templates/card-review.html', './data/testimonials-2.json')
+      </div>
+      <div class="testimonials__col">
+        @@loop('./../templates/card-review.html', './data/testimonials-3.json')
+      </div>
+    </div>
+  </div>
+</section>

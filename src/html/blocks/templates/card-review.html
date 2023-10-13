@@ -1,0 +1,17 @@
+<div class="card-review">
+  <div class="card-review__rating">
+    @@for (var i = 0; i < context.stars; i++) {
+    <img src="./img/icons/star.svg" alt="star" class="card-review__img" />
+    } @@for (var i = 0; i < 5 - context.stars; i++) {
+    <img src="./img/icons/star-off.svg" alt="star" class="card-review__img" />
+    }
+  </div>
+  <p class="text">@@text</p>
+  <div class="card-review__author">
+    <img src="./img/testimonials/@@img" alt="avatar" class="card-review__author-img" />
+    <div class="card-review__desc">
+      <div class="card-reviw__name">@@name</div>
+      <div class="card-reviw__job muted">@@role</div>
+    </div>
+  </div>
+</div>

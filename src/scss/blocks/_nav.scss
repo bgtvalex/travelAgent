@@ -1,0 +1,48 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav__logo {
+  flex-shrink: 0;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+
+  a {
+    color: #181818;
+    transition: opacity 0.2s ease-in;
+  }
+
+  a:hover,
+  a.active {
+    color: #35aff4;
+  }
+
+  @include mediaMobile {
+    display: none;
+  }
+}
+
+.nav__btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+
+  @include mediaMobile {
+    display: none;
+  }
+}
+
+.nav__icon {
+  display: none;
+
+  @include mediaMobile {
+    display: block;
+  }
+}

@@ -1,0 +1,51 @@
+.popular {
+  padding: 60px 0;
+}
+
+.popular__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 32px;
+
+  @include mediaMobile {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.popular__title {
+  display: grid;
+  gap: 16px;
+
+  @include mediaMobile {
+    gap: 8px;
+  }
+}
+
+.popular_controls {
+  display: flex;
+  flex-shrink: 0;
+  gap: 15px;
+
+    @include mediaMobile {
+      gap: 10px;
+    }
+
+   img {
+
+    @include mediaMobile {
+      width: 80%;
+    }
+  }
+
+}
+
+.popular__slider {
+  @include mediaMobile {
+    display: flex;
+    justify-content: center;
+    margin-right: 16px;
+  }
+}

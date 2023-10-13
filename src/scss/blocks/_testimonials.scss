@@ -1,0 +1,135 @@
+.testimonials {
+  overflow: hidden;
+  height: 75vh;
+
+  @include mediaTablet {
+    height: auto;
+    overflow: auto;
+  }
+}
+.testimonial_swiper {
+  width: 1023px;
+
+  @include mediaMobile {
+    width: 767px;
+  }
+
+  @include mediaMobileXS {
+    width: 374px;
+  }
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+
+  @include mediaTablet {
+    display: none;
+  }
+}
+
+.testimonials__grid--full {
+  display: none;
+
+  @include mediaTablet {
+    display: block;
+  }
+}
+
+.smooth-transition {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+
+.testimonials__col {
+  display: grid;
+  gap: 32px;
+
+  animation: slideUp 20s linear infinite;
+
+  &--full {
+    display: none;
+  }
+
+  &:nth-child(2) {
+    padding-top: 100px;
+  }
+
+  &:nth-child(3) {
+    padding-top: 50px;
+  }
+
+  &:nth-child(4) {
+    padding-top: 50px;
+  }
+
+  @include mediaTablet {
+    display: flex;
+    animation: none;
+
+    &--full {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:nth-child(2) {
+      display: none;
+    }
+
+    &:nth-child(3) {
+      display: none;
+    }
+
+    &:nth-child(4) {
+      display: none;
+    }
+  }
+}
+
+.swiper-slide {
+  max-width: 388px;
+
+  @include mediaMobileS {
+    max-width: 320px;
+  }
+}
+
+.card-review {
+  max-width: 388px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+
+  @include mediaMobileS {
+    max-width: 320px;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(-50%);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  97% {
+    transform: translateY(-50%);
+    opacity: 1;
+    filter: blur(10px);
+  }
+  98% {
+    transform: translateY(0%);
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
