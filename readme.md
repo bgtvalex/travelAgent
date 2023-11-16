@@ -1,5 +1,7 @@
 # Project: Travel Agent
 
+* [demo](https://bgtvalex.github.io/travelAgent/)
+
 ### Technologies:
 * HTML, CSS, SASS, JS, Gulp, Webpack.
 
